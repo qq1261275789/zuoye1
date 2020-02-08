@@ -232,6 +232,8 @@ def bian2(x):
                     sum3=sum3[0:len(sum3)-1]
                 return danwei3(sum3)
 def danwei3(x):
+    if x[len(x)-1]=='零':
+        x=x[0:len(x)-1]
     a=x.split('万')
     c=x.split('亿')
     sum0=''
