@@ -107,6 +107,8 @@ def bian(x):
                     sum6*=bian(x[i-1])
                 elif danwei(x[i-1])==2 :
                     i+=1
+                elif danwei(x[i-1])!=2 and danwei(x[i])==2:
+                    sum6=sum6*bian(x[i-1])
                 elif danwei(x[i])==0:
                     sum6+=x[i]
                 i=i-1
