@@ -95,7 +95,7 @@ def bian(x):
                     sum5*=bian(x[len(x)-1])
             return sum5
         elif sum4==1:
-            for i in range(1,len(x),1):
+            for i in range(1,len(x),2):
                 if danwei(x[i])==1:
                     if bian(x[i-1])*bian(x[i])<sum6:
                         sum6+=bian(x[i-1])*bian(x[i])
