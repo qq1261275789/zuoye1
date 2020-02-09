@@ -1,3 +1,5 @@
+global xx
+xx=0
 def bian(x):
     sum1=0
     sum2=0
@@ -5,6 +7,11 @@ def bian(x):
     sum4=0
     sum5=0
     sum6=0
+    sum7=''
+    global xx
+    if x[0]=='十' and xx==0:
+        x='一'+x
+        xx+=1
     for i in range(0,len(x)):
         if x[i]=='十' or x[i]=='百' or x[i]=='千' or x[i]=='万' or x[i]=='亿':
             sum1=1
@@ -107,7 +114,12 @@ def bian(x):
                 sum6+=bian(x[i])
             if i<len(x)-1:
                 sum6+=bian(x[len(x)-1])
-            return sum6
+            if str(sum6)[0]!=str(bian(x[0])):
+                sum7=str(sum6)[1:]
+                sum7=str(bian(x[0]))+sum7
+                return int(sum7)
+            else:
+                return sum6
 
 def danwei(x):
     if x=='十' or x=='百' or x=='千' or x=='万' or x=='亿':
