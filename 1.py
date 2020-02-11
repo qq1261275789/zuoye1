@@ -181,7 +181,7 @@ def bian2(x):
     
     if x[0]=='-':
         return'负'+bian2(x[1:])
-    elif x[0]=='一' or x[0]=='二' or x[0]=='三'or x[0]=='四' or x[0]=='五' or x[0]=='六' or x[0]=='七' or x[0]=='八' or x[0]=='九' or x[0]=='十' or x[0]=='零':
+    elif x[0]=='一' or x[0]=='二' or x[0]=='三'or x[0]=='四' or x[0]=='五' or x[0]=='六' or x[0]=='七' or x[0]=='八' or x[0]=='九' or x[0]=='十' or x[0]=='零' or x[0]=='负':
         return x
     else:
         if len(x)==1:
