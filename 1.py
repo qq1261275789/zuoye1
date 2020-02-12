@@ -339,6 +339,8 @@ def zheng(x):
             
 global zz
 zz=0
+global zz
+zz=0
 def shuru(a):
     z1=0
     z2=0
@@ -346,7 +348,16 @@ def shuru(a):
     z4=0
     z5=0
     z6=0
+    z7=0
+    z8=''
+    z9=len(a)
     global zz
+    for i in range(0,z9):
+        z9=len(a)
+        for j in range(0,z9):
+            if a[j]=='':
+                a.pop(j)
+                break
     if a[0]== '整数':
         if zz==0:
             zz=1
@@ -360,6 +371,7 @@ def shuru(a):
             b.append(a[1])
             if a[2]== '等于':
                 c.append(bian2(a[3]))
+                
     elif a[0]== '看看':
         for i in range(len(b)):
             if b[i]==a[1]:
@@ -375,7 +387,14 @@ def shuru(a):
     elif a[0]=='如果':
         for i in range(len(b)):
             if b[i]==a[1]:
-                if bijiao(a[2],c[i],a[3])==True:
+                for j in range(len(b)):
+                    if b[j]==a[3]:
+                        z7=1
+                if z7==0:
+                    z8=a[3]
+                else:
+                    z8=c[j]
+                if bijiao(a[2],c[i],z8)==True:
                     if a[4]=='则':
                         for x in range(5,len(a)):
                             if a[x]=='否则':
@@ -385,7 +404,7 @@ def shuru(a):
                             shuru(a[5:x])
                         else:
                             shuru(a[5:])
-                elif bijiao(a[2],c[i],a[3])==False:
+                elif bijiao(a[2],c[i],z8)==False:
                     
                     for x in range(4,len(a)):
                         if a[x]=='否则':
