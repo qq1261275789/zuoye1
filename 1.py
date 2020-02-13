@@ -434,7 +434,7 @@ def shuru(a):
             z11=a[2]
         for i in range(len(b)):
             if b[i]==a[0]:
-                a13=1
+                z13=1
                 break
         if z13==1:
             c[i]=bian2(str(int(jisuan(a[1],int(bian(c[i])),int(bian(z11))))))
