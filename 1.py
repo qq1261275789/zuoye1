@@ -370,10 +370,12 @@ def shuru(a):
                     z6=1
                     break;
         if z6==0:
-            b.append(a[1])
+            
             if a[2]== '等于':
+                b.append(a[1])
                 c.append(bian2(a[3]))
-                
+            else:
+                print("输入不规范")
     elif a[0]== '看看':
         for i in range(len(b)):
             if b[i]==a[1]:
